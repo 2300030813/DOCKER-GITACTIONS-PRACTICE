@@ -22,7 +22,7 @@ services:
       context: ./BACKEND/BOOKINGAPI-SPRINGBOOT
       dockerfile: ./BACKEND/BOOKINGAPI-SPRINGBOOT/backend.Dockerfile
     ports:
-      - "7000:1700"
+      - "1700:1700"
     depends_on:
       - mysqldb
     restart: on-failure
