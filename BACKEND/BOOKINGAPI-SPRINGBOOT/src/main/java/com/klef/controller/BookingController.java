@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import com.klef.entity.Booking;
 import com.klef.service.BookingService;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+
 @RestController
 @RequestMapping("/bookingapi")
 @CrossOrigin(origins = "http://localhost:5173","http://localhost:7001", allowCredentials = "true")

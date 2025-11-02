@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.*;
 import com.klef.entity.User;
 import com.klef.service.UserService;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+
 @RestController
 @RequestMapping("/userapi")
-@CrossOrigin(origins = "http://localhost:5173","http://localhost:7001")
+@CrossOrigin(origins = "http://localhost:5173","http://localhost:7001",allowCredentials = "true")
+
 public class UserController {
 
     @Autowired
