@@ -16,11 +16,11 @@ services:
     
 
   backend:
-    image: 2300030813/docker-backend:latest
+    image: 2300030813/docker-backend-gitactions:latest
     container_name: springboot
     build:
-      context: ./FRONTEND/BOOKINGAPI-REACT
-      dockerfile: frontend.Dockerfile
+      context: ./BACKEND/BOOKINGAPI-SPRINGBOOT
+      dockerfile: ./BACKEND/BOOKINGAPI-SPRINGBOOT/backend.Dockerfile
     ports:
       - "7000:1700"
     depends_on:
@@ -30,11 +30,11 @@ services:
       - springboot-mysql-net
 
   frontend:
-    image: 2300030813/docker-frontend:latest
+    image: 2300030813/docker-frontend-gitactions:latest
     container_name: react
     build:
-      context: ./BACKEND/BOOKINGAPI-SPRINGBOOT
-      dockerfile: backend.Dockerfile
+      context: ./FRONTEND/BOOKINGAPI-REACT
+      dockerfile: ./FRONTEND/BOOKINGAPI-REACT/frontend.Dockerfile
     ports:
       - "7001:80"
     depends_on:
